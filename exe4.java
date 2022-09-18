@@ -1,10 +1,31 @@
-import java.awt.*;
-
 public class exe4 {
-    public static void main(String[] args) {
-        Rectangle box=new Rectangle(5,10,20,30);
-        box.add(0,0);
-        System.out.println("\n expected \t Rectangle[x=0,y=0,width=25,height=40]");
-        System.out.println(box);
+    private double goodprice;
+    private double payment;
+public exe4()
+{
+     goodprice=0;
+     payment=0;
+
+}
+public void setGoodprice(double price){
+    this.goodprice=goodprice+price;
+}
+
+    public double getGoodprice() {
+        return goodprice;
+    }
+
+    public double getPayment() {
+        return payment;
+    }
+
+    public void setPayment(double amont) {
+        this.payment = payment+amont;
+    }
+    public double getrest(){
+    double rest =payment-goodprice;
+    goodprice=0;
+    payment=0;
+    return rest;
     }
 }
